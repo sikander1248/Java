@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 
-package javabatchsep;
-
 import java.util.Scanner;
 
 /**
@@ -23,12 +21,12 @@ import java.util.Scanner;
         System.out.println("Number of elements in arr2 : " + arr2.length);
         
         System.out.println("Elements of Array 1 ");
-        for(int i = 0 ; i < arr1.length ; i++)
-            System.out.print(arr1[i] + " ");
-        
+        for(int ele : arr1)
+            System.out.print(ele + " ");
         System.out.println("\nElements of Array 2 ");
-        for(int i = 0 ; i < arr2.length ; i++)
-            System.out.print(arr2[i] + " ");
+    
+        for(int ele : arr2)
+            System.out.print(ele + " ");
      }
 }
 
