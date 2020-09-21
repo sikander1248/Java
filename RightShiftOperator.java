@@ -17,7 +17,7 @@ class RightShiftOperator {
      }
      static public  void main(String  sikander[] ) {
         // TODO code application logic here
-        int x = 0x85;
+        byte x = (byte)0x85;
         int y = 1;
         int  res = x >> 1; 
         
