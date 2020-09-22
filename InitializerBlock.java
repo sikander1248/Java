@@ -19,9 +19,12 @@ class Student
     
     // Initializer Block
     {
-        System.out.println("This is a block without a name ");
+        System.out.println("This is a non-static initializer Block ");
     }
-    
+    static
+    {
+            System.out.println("This is a Static initializer Block ");
+    }
     Student()
     {
         System.out.println("Default Constructor - Hashcode of this = " + this.hashCode());
