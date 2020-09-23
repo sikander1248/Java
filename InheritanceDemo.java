@@ -18,25 +18,70 @@ class Rectangle{
         this.length = length;
         this.breadth = breadth;
     }
-
     int area()
     {
         return length * breadth;
     }
-
     double perimeter()
     {
         return 2 * (length + breadth);
     }
 }
+class Cuboid extends Rectangle
+{
+    int height;
+    Cuboid(int length, int breadth,int height)
+    {
+        super(length, breadth);
+        this.height = height;
+    }
+    int volume()
+    {
+        return length * breadth * height;
+    }
+}
+
+
 public class InheritanceDemo {
     public static void main(String [] args)
     {
-        Rectangle r1 = new Rectangle(4, 7);
+        Cuboid  cb = new Cuboid(2,3,5);
         
-        System.out.println("Area of Rectangle : " + r1.area() ); //28
+        System.out.println("Area of Cuboid : " + cb.area() );
+        System.out.println("Perimeter of Cuboid : " + cb.perimeter());
+        System.out.println("Volume of Cuboid : " + cb.volume());
+
+        Rectangle r = new Rectangle(3,5);
+        System.out.println("Area of Rectangle: " + r.area() );
+        System.out.println("Perimeter of Rectangle : " + r.perimeter());
+        //System.out.println("Volume of Rectangle : " + r.volume());
         
-        System.out.println("Perimeter of Rectangle : " + r1.perimeter() ); //22
-        
+    }
+}
+
+
+
+class A
+{
+    int a;
+    A( )
+    {
+        System.out.println("FEROZE GANDHI - DEFAULT ");
+    }
+    A(int  a)
+    {
+        System.out.println("FEROZE GANDHI - PARAMETERIZED");
+    }
+}
+class B extends A
+{
+    B( )
+    {
+        System.out.println("RAHUL GANDHI");
+    }
+    B(int x )
+    {
+        super(x);
+        System.out.println("RAHUL GANDHI - PARAMETERIZED");
     }
 }
