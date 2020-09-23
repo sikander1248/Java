@@ -20,6 +20,7 @@ class Rectangle{
     }
     int area()
     {
+        System.out.println("Area of Rectangle");
         return length * breadth;
     }
     double perimeter()
@@ -34,6 +35,16 @@ class Cuboid extends Rectangle
     {
         super(length, breadth);
         this.height = height;
+    }
+    @Override
+    int area()
+    {
+        System.out.println("Area of Cuboid");
+        int bottomTop = 2 * (length * breadth);
+        int side1_3 = 2 * (breadth *  height);
+        int side2_4 = 2 * (length * height);
+        
+        return bottomTop + side1_3 + side2_4;   
     }
     int volume()
     {
@@ -51,9 +62,9 @@ public class InheritanceDemo {
         System.out.println("Perimeter of Cuboid : " + cb.perimeter());
         System.out.println("Volume of Cuboid : " + cb.volume());
 
-        Rectangle r = new Rectangle(3,5);
-        System.out.println("Area of Rectangle: " + r.area() );
-        System.out.println("Perimeter of Rectangle : " + r.perimeter());
+        //Rectangle r = new Rectangle(3,5);
+        //System.out.println("Area of Rectangle: " + r.area() );
+        //System.out.println("Perimeter of Rectangle : " + r.perimeter());
         //System.out.println("Volume of Rectangle : " + r.volume());
         
     }
